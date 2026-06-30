@@ -22,6 +22,10 @@ Mở http://localhost:5173
 
 https://naka0221.github.io/game/
 
+> **Lần đầu deploy:** Vào [Settings → Pages](https://github.com/naka0221/game/settings/pages), chọn **Deploy from a branch**, branch **gh-pages**, folder **/ (root)**, rồi Save. Sau vài phút game sẽ live tại URL trên.
+
+Mỗi lần push lên `main`, GitHub Actions tự build và deploy lên branch `gh-pages`.
+
 ## Build production
 
 ```bash
