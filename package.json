@@ -1,0 +1,24 @@
+{
+  "name": "gold-miner-3d",
+  "version": "1.0.0",
+  "description": "3D Gold Miner web game built with Three.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naka0221/game.git"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.175.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.175.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.3"
+  }
+}

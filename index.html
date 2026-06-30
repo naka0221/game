@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đào Vàng 3D</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="game-canvas"></canvas>
+      <div id="hud">
+        <div class="hud-row">
+          <div class="hud-item">
+            <span class="label">Tiền</span>
+            <span id="money" class="value">$0</span>
+          </div>
+          <div class="hud-item">
+            <span class="label">Mục tiêu</span>
+            <span id="target" class="value">$0</span>
+          </div>
+          <div class="hud-item">
+            <span class="label">Thời gian</span>
+            <span id="timer" class="value">60</span>
+          </div>
+          <div class="hud-item">
+            <span class="label">Màn</span>
+            <span id="level" class="value">1</span>
+          </div>
+        </div>
+      </div>
+      <div id="overlay" class="hidden">
+        <div id="overlay-content">
+          <h1 id="overlay-title">Đào Vàng 3D</h1>
+          <p id="overlay-message">Nhấn SPACE hoặc Click để hạ móc cẩu!</p>
+          <button id="overlay-btn">Bắt đầu</button>
+        </div>
+      </div>
+      <div id="controls-hint">
+        <kbd>SPACE</kbd> / Click — Hạ móc &nbsp;|&nbsp; <kbd>P</kbd> — Tạm dừng
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
