@@ -82,7 +82,7 @@ export class SceneManager {
     const poleGeom = new THREE.CylinderGeometry(0.15, 0.15, 9, 8);
     const poleMat = new THREE.MeshStandardMaterial({ color: 0x666666, metalness: 0.7 });
     const pole = new THREE.Mesh(poleGeom, poleMat);
-    pole.position.set(0, 4.5, 0);
+    pole.position.set(0, 4.5, 4);
     pole.castShadow = true;
     this.scene.add(pole);
   }

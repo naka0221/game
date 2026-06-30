@@ -3,9 +3,10 @@ import type { HookState } from './types';
 import type { MineItem } from './Item';
 
 const PIVOT_Y = 9;
+const PIVOT_Z = 4;
 const MIN_ANGLE = -Math.PI / 3;
 const MAX_ANGLE = Math.PI / 3;
-const MAX_ROPE_LENGTH = 14;
+const MAX_ROPE_LENGTH = 20;
 const BASE_EXTEND_SPEED = 10;
 const BASE_RETRACT_SPEED = 8;
 const SWING_AMPLITUDE = (MAX_ANGLE - MIN_ANGLE) / 2;
@@ -26,7 +27,7 @@ export class Hook {
   attachedItem: MineItem | null = null;
 
   private ropeGeometry: THREE.CylinderGeometry;
-  private readonly pivot = new THREE.Vector3(0, PIVOT_Y, 0);
+  private readonly pivot = new THREE.Vector3(0, PIVOT_Y, PIVOT_Z);
 
   constructor(scene: THREE.Scene) {
     this.group = new THREE.Group();
@@ -186,11 +187,15 @@ export function checkHookCollision(
   for (const item of items) {
     if (item.collected) continue;
     const dist = tip.distanceTo(item.position);
-    if (dist < item.grabRadius + 0.3 && dist < closestDist) {
+    if (dist < item.grabRadius + 0.6 && dist < closestDist) {
       closest = item;
       closestDist = dist;
     }
   }
 
   return closest;
+}
+
+export function getHookPivot(): THREE.Vector3 {
+  return new THREE.Vector3(0, PIVOT_Y, PIVOT_Z);
 }

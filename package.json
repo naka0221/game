@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:collision": "playwright test tests/collision.spec.ts"
   },
   "repository": {
     "type": "git",
@@ -17,7 +19,10 @@
     "three": "^0.175.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.61.1",
     "@types/three": "^0.175.0",
+    "gh-pages": "^6.3.0",
+    "playwright": "^1.61.1",
     "typescript": "^5.8.2",
     "vite": "^6.2.3"
   }

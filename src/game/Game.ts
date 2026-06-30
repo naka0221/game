@@ -28,6 +28,10 @@ export class Game {
     window.addEventListener('keydown', (e) => {
       if (e.code === 'Space') {
         e.preventDefault();
+        if (this.state === 'menu') {
+          this.startLevel(0);
+          return;
+        }
         this.onDrop();
       }
       if (e.code === 'KeyP') {
@@ -35,7 +39,7 @@ export class Game {
       }
     });
 
-    window.addEventListener('pointerdown', () => {
+    this.sceneManager.renderer.domElement.addEventListener('pointerdown', () => {
       if (this.state === 'playing') {
         this.onDrop();
       }
