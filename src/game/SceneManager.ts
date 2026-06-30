@@ -130,7 +130,6 @@ export class SceneManager {
   };
 
   dispose(): void {
-    cancelAnimationFrame(this.animationId);
     window.removeEventListener('resize', this.onResize);
     this.clearItems();
     this.hook.dispose();

@@ -18,6 +18,10 @@ npm run dev
 
 Mở http://localhost:5173
 
+## Chơi online
+
+https://naka0221.github.io/game/
+
 ## Build production
 
 ```bash
